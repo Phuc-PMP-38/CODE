@@ -1,0 +1,1 @@
+prompt('Bạn bao nhiêu tuổi?);

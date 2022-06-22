@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="urt-f8">
+  <title>lol</title>
+  <link rel="stylesheet" href="main222.css" type="text/css">
+</head>
+
+<body>
+  <div id="content">
+    <p>Mẫu điện thoại Realme thu hút người dùng với một thiết kế trẻ trung và hiện đại.
+      Mặt lưng của máy nổi bật với họa tiết sọc chéo độc đáo dành riêng cho Narzo 30A và nó xuất hiện trên cả hai
+      phiên bản màu Đen và màu Xanh.
+      Ngôn ngữ thiết kế này được hãng công nghệ Trung Quốc áp dụng để tạo nên những nét đặc trưng cho mẫu điện thoại
+      này.
+      Nó giúp điện thoại dễ dàng nhận ra giữa đám đông những điện thoại giá rẻ.
+      Ngoài những sọc chéo logo Narzo cũng được áp dụng để đem đến một điểm nhận diện thương hiệu cho hãng điện thoại
+      này. Điều này tạo nên chất riêng cho máy.
+    </p>
+    <p>Mặt lưng cũng gây ấn tượng với cụm camera vuông khi thiết kế này mang đến một vẻ ngoài cực kỳ
+      hút mắt.
+      Dẫu vậy, cụm camera cũng là một trong những đặc điểm chung trên những thiết bị Android giá rẻ hiện nay như
+      Samsung Galaxy A12 hay Oppo A15.
+      Trong khi đó, mặt trước vẫn sẽ là phong cách của những mẫu điện thoại giá rẻ với màn hình “giọt nước” và viền
+      cằm dưới dày.
+      Tuy nhiên, ưu điểm của nó vượt trội hơn những mẫu điện thoại khác trong cùng tầm giá đó chính là.
+      viền màn hình ở hai bên và ở cạnh trên tương đối mỏng điều này tăng cảm giác hiển thị.</p>
+  </div>
+  <a id="show-more" onclick="mysline()">show more</a>
+  <script>
+    var content = document.getElementById("content");
+    var button = document.getElementById("show-more");
+    button.onclick = function () {
+      console.log("Show more clicked!!!");
+      if (content.className == "open") {
+        content.className = "";
+        button.innerHTML = "show more";
+      } else {
+        content.className = "open";
+        button.innerHTML = "show less";
+      }
+    };
+  </script>
+</body>
+
+</html>

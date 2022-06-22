@@ -1,0 +1,756 @@
+.link_hang_dt{
+    height: auto;  
+}
+.link_hang_dt ul{
+    display: flex;
+}
+.link_hang_dt ul li{
+    margin-left: 20px;
+    list-style-type: none;
+}
+.link_hang_dt ul li a{
+    text-decoration: none;
+    color: black;
+}
+.dt_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+
+}
+.dt_container .dt_img{
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+.dt_container .dt_information{
+    width: 50%;
+    height: auto;
+    margin-left: 20px;
+}
+/* .dt_container .dt_promotion{
+    width: 33%;
+    height: auto;
+} */
+body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container1 {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides_dt {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev1, .next1 {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    outline: 0;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: #FFFFFF;
+    border: 1px solid #F5F1ED;
+    border-radius: 4px;
+    background-position: center center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+}
+  /* Position the "next button" to the right */
+  .next1 {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev1{
+    left: 10px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev1:hover,
+  .next1:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+    height: auto;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active1,
+  .demo:hover {
+    opacity: 1;
+  }
+  .text1,
+  .numbertext1{
+      display: none;
+  }
+  .dt_memory{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 10px 0;
+  }
+  .dt_memory .memory:hover,.dt_memory .memory.active2{
+    color: #090809;
+    border: 1px solid #F15A25;
+  }
+  .dt_memory .memory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px 10px 0;
+    padding: 8px;
+    border: 1px solid #F5F1ED;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #636B7B;
+    cursor: pointer;
+  }
+  .dt_memory a{
+    text-decoration: none;
+  }
+  .dt_color_phone {
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    padding: 2px 5px;
+    width: 33.3%;
+}
+.dt_phone_color{
+   display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.dt_color_full{
+  position: relative;
+    height: auto;
+    max-width: 99%;
+    margin: auto;
+}
+.dt_color_phone .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 16px 10px 0;
+  padding: 8px;
+  border: 1px solid #F5F1ED;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #636B7B;
+  cursor: pointer;
+  width: 100%;
+}
+.option.active3 {
+  color: #090809;
+  border: 1px solid #F15A25;
+}
+.dt_color_phone > .option > .color {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 0 8px 0 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(112,121,140,0.2);
+}
+.dt_color_phone > .option > .color figure.image-wrapper img {
+  border-radius: 50%;
+}
+figure.image-wrapper {
+  position: relative;
+  padding-top: 100%;
+  width: 100%;
+}
+figure.image-wrapper img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  -o-object-fit: contain !important;
+  background: #fff;
+}
+figure.image-wrapper.image-cover img {
+  object-fit: cover !important;
+  -o-object-fit: cover!important;
+}
+figure {
+  margin: 0;
+}
+.dt_color_phone >.option p {
+  font-size: 12px;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  color: #636B7B;
+  margin: 0 0 4px 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  text-align: inherit;
+}
+.dt_color_phone .color-price2 {
+  color: #F15A25;
+}
+.dt_name{
+  color: #636B7B;
+    margin: 0 0 4px 0;
+    font-size: 12px;
+}
+.price_dt{
+  font-size: 18px;
+  margin: 0 10px 2px 0;
+  color: #636B7B;
+}
+.dt_newprice {
+  color: #2F80ED;
+  font-weight: 600;
+  margin:0 10px 0 10px;
+}
+.dt_promo_bottom {
+  border: 1px solid #E2E4E8;
+  border-radius: 2px;
+  border-width: 0 1px 1px 1px;
+  margin: 0 0 10px 0;
+}
+.dt_promo_bottom .tabcontent {
+  padding: 12px 12px 8px 16px;
+}
+.tabcontent.active5 {
+  display: block;
+}
+.tabcontent {
+  display: none;
+  background: #fff;
+}
+.dt_promo_bottom .tabcontent ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.dt_promo_bottom .tabcontent ul li:before {
+  content: '';
+  display: block;
+  float: left;
+  clear: both;
+  width: 24px;
+  height: 24px;
+  background-image: url(https://stcv4.hnammobile.com/v7/images/icon/check_green.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 8px 0 0;
+}
+.dt_promo_bottom .tabcontent ul li:before {
+  margin-top: -3px;
+}
+.dt_promo_bottom .tabcontent ul li p {
+  margin-left: 25px;
+}
+.dt_promo_bottom .tabcontent ul li p {
+  font-size: 12px;
+  margin: 0 0 8px 32px;
+}
+.dt_promo_bottom a {
+  display: inline;
+}
+a {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.dt_promo_bottom .tabcontent ul li p img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.dt_promo_bottom .tabcontent ul li img {
+  margin: 0 0 0 26px;
+}
+.button_mua{
+  width: 100%;
+  height: 80px;
+}
+.button_mua a{
+  width: 100%;
+  height: 50px;
+}
+.button_mua a button{
+  width: 100%;
+  height: 50px;
+}
+.button_tragop{
+  display: flex;
+  width: 100%;
+}
+.muahang{
+  width: 100%;
+}
+.button_tragop .muahang a{
+  width: 100%;
+  height: 40px;
+}
+.button_tragop .muahang a button{
+  width: 100%;
+  height: 40px;
+}
+.muahang.left_dt{
+  margin: 0px 10px 0px 0px;
+}
+.muahang .right_dt{
+  margin: 0 0 0 10px;
+}
+.dt_help{
+  width: 100%;
+  height: 200px;
+  /* background-color: #090809; */
+  padding-bottom: 15px;
+}
+.policy{
+  margin-top: 20px;
+    padding: 12px 0;
+}
+.policy_list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.policy_list>li:nth-child(2n+1) {
+  padding-right: 20px;
+}
+.policy_list>li {
+  border-bottom: 1px solid #f1f1f1;
+  position: relative;
+  padding: 12px 0 12px 35px;
+  width: 50%;
+  display: inline-block;
+}
+.policy_list>li {
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+}
+.policy_list li>div.iconl {
+  left: 0;
+  position: absolute;
+  top: 8px;
+}
+.policy_list li .iconl {
+  width: 32px;
+}
+.icondetail-doimoi {
+  background-position: 0 -35px;
+  height: 32px;
+  width: 32px;
+}
+[class^="icondetail-"], [class*="icondetail-"] {
+  background-image: url(//cdn.tgdd.vn/mwgcart/mwg-site/ContentMwg/images/TGDD/Mobile/icon_chitiet@2x-min.png?v=2);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  background-size: 300px 180px;
+}
+.icondetail-baohanh {
+  background-position: -105px -35px;
+  height: 32px;
+  width: 32px;
+}
+.icondetail-sachhd {
+  background-position: -70px -35px;
+  height: 32px;
+  width: 32px;
+}
+.dt_information_main{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.phone_information{
+  width: 40%;
+  height: auto;
+}
+.img_main{
+  width: 60%;
+  height: auto;
+}
+.img_main img{
+  width: 100%;
+  height: auto;
+}
+.information_main{
+  width: 100%;
+  height: auto;
+}
+.information_main ul li{
+  display: flex;
+  background-color: azure;
+  padding: 10px 10px;
+}
+.parameter__list .lileft {
+  width: 140px;
+}
+.parameter {
+  padding: 15px 0;
+}
+.parameter__title {
+  margin-bottom: 0;
+  line-height: 1.3;
+  font-size: 20px;
+  font-weight: bold;
+}
+.parameter__title {
+  margin-top: 20px;
+}
+.parameter__list.actives1 {
+  display: block;
+}
+.parameter__list {
+  display: none;
+  margin-bottom: 15px;
+}
+.parameter__list li {
+  align-items: flex-start;
+  display: flex;
+  padding: 10px;
+}
+.parameter__list li:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+.parameter__link__list-files__item {
+  display: block;
+  margin: 10px 0;
+}
+.parameter__link {
+  color: #2f80ed;
+  display: inline-block;
+}
+.icondetail-document {
+  background-position: -210px 0;
+  height: 16px;
+  width: 16px;
+} 
+.btn-detail.btn-short-spec {
+  margin: 10px auto !important;
+  cursor: pointer;
+}
+.btn-detail {
+  border: 1px solid #2f80ed;
+  border-radius: 5px;
+  color: #2f80ed;
+  display: block;
+  margin: 0 auto;
+  max-width: 340px;
+  padding: 10px 5px;
+  text-align: center;
+}
+.btn-detail span {
+  position: relative;
+}
+.btn-detail span::before {
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #2f80ed;
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: -15px;
+}
+/* #dt_thongtin_main{
+  width: 70%;
+  height: auto;
+} */
+.detail-content-image {
+  text-align: center;
+}
+figure {
+  margin-bottom: 30px;
+}
+.text_dt_p{
+ margin-bottom: 30px;
+}
+.text_dt_p{
+  text-align: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+p {
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  text-align: left;
+  line-height: 1.5;
+}
+.text_i{
+  margin-top: 20px;
+}
+/* button doc tiep */
+.article-content .read-more {
+  width: 100%;
+  height: 48px;
+}
+/* .dt_thongtin_format{
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5em;
+    height: auto;
+} */
+#dt_thongtin_main{
+  width: 70%;
+  max-height: 200px;
+  background-color: #fff;
+  padding: 20px;
+  padding-top: 0px;
+  font-family: calibri;
+  font-size: 18px;
+  overflow: hidden;
+  -webkit-transition: max-height 0.7s;
+  -moz-transition:  max-height 0.7s;
+  transition:max-height 0.7s;
+}
+#dt_thongtin_main.open{
+  max-height: 1000px;
+  -webkit-transition: max-height 0.7s;
+  -moz-transition:  max-height 0.7s;
+  transition:max-height 0.7s;
+}
+
+#show-more {
+  color: #F15A25;
+  background: #fff;
+  border: 1px solid #F15A25;
+  width: 100%;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+}
+#show-more:before {
+  content: '';
+  display: block;
+  background: linear-gradient(
+180deg
+, rgba(255,255,255,0) 0%, #fff 100%);
+  height: 68px;
+  width: 100%;
+  top: -69px;
+  left: 0px;
+  position: absolute;
+  z-index: 1;
+}
+#show-more{
+    background-color: #1594e5;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+    width: 70%;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+    /* margin: 20px auto; */
+    cursor: pointer;
+}
+.ic {
+  display: inline-flex;
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  margin: 0 6px 0 0;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1199.98px){
+.ic {
+    margin: 0 2px 0 0;
+}}
+.ic.ic_chervon_down-orange {
+  background-size: 8px auto;
+  background-image: url(https://stcv4.hnammobile.com/v7/images/icon/chervon_down_orange.svg);
+}
+.show_text_phone{
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.show_text_dt{
+  width: 60%;
+  height: 430px;
+  display: flex;
+}
+.show_comment{
+
+  width: 100%;
+  height: auto;
+}
+.show_danhgia{
+  margin-left: 5%;
+  width: 35%;
+  height: auto;
+}
+.comment_textbox{
+  position: absolute; /* Canh giữa */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.comment_dt{
+  width: 100%;
+  height: 430px;
+  border: 1px solid black;
+  text-align: center;
+  position: relative;
+}
+.a_text_comment{
+  color: #F15A25;
+  font-size: 14px;
+}
+#content {
+  width: 70%;
+  background: #fff;
+  padding: 20px;
+  padding-top: 0;
+  font-family: calibri;
+  font-size: 18px;
+  color: #444;
+  max-height: 270px;
+  overflow: hidden;
+  /* Set transitions up. */
+  -webkit-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
+  transition: max—height 0.7s;
+}
+
+#content.open {
+
+  max-height: 2000px;
+  /* Set transitions up. */
+  -webkit-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+}
+.show_content_dt{
+  width: 100%;
+  height: 400px;
+}
+.show_content_ht{
+  padding: 22px 24px 16px 24px;
+  background: #F6F7F8;
+  display: flex;
+  border: 1px solid #E2E4E8;
+  border-radius: 2px 2px 0 0;
+}
+.show_content_dg{
+  padding: 20px 22px 24px 22px;
+  border: 1px solid #E2E4E8;
+  border-radius: 0 0 2px 2px;
+}
+.show_content_ht .point {
+  font-size: 40px;
+  line-height: 150%;
+  color: #F15A25;
+  position: relative;
+}
+.show_content_ht .point:after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: #E2E4E8;
+  position: absolute;
+  top: calc(50% - 20px);
+  right: -20px;
+}
+.show_content_ht .rating-times {
+  font-size: 12px;
+  color: #636B7B;
+  padding: 0 0 0 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.show_content_ht .rating-times p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.stars span {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  margin: 0 0 0 5px;
+  background-image: url(https://stcv4.hnammobile.com/v7/images/icon/star_grey.svg);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.stars span {
+  flex: 0 0 16px;
+}
+.stars.stars-fill {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  overflow: hidden;
+}
+.stars span.star {
+  background-image: url(https://stcv4.hnammobile.com/v7/images/icon/star.svg);
+}

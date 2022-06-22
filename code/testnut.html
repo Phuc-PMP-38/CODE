@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="main3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="head_boloc">
+        <div class="boloc">
+            <p class="boloc_p">Có 30 sản phẩm</p>
+            <div class="check_gia">
+                <div class="options">
+                    <label class="container-checkbox">
+                        <a rel="nofollow" href="">Dưới 5 triệu <input type="checkbox"><span
+                                class="checkmark"></span></a></label>
+                    <label class="container-checkbox">
+                        <a rel="nofollow" href="">Từ 5 đến 10 triệu <input type="checkbox"> <span
+                                class="checkmark"></span></a>
+                    </label>
+                    <label class="container-checkbox">
+                        <a rel="nofollow" href="">Từ 10 đến 20 triệu <input type="checkbox" checked=""><span
+                                class="checkmark"></span></a>
+                    </label>
+                    <label class="container-checkbox">
+                        <a rel="nofollow" href="">Trên 20 triệu <input type="checkbox"><span
+                                class="checkmark"></span></a>
+                    </label>
+                </div>
+            </div>
+            <script>
+                var header = document.getElementById("myDIV");
+                var btns = header.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                  btns[i].addEventListener("click", function() {
+                  var current = document.getElementsByClassName("active");
+                  current[0].className = current[0].className.replace(" active", "");
+                  this.className += " active";
+                  });
+                }
+                </script>
+        </div>
+    </div>
+</body>
+</html>
